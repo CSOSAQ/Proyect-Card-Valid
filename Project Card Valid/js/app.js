@@ -42,38 +42,17 @@ function isValidCard(cardNumber){
     }
     // Si la suma total, módulo 10 es 0, es tarjeta valida
     if(result%10===0){
-        temp=true;
-        alert("Tarjeta válida");
+        
+      return  alert("Tarjeta válida");
     }
     //Caso contrario tarjeta es inválida
     else{
-        temp=false;
-        alert("Tarjeta inválida");
+       return alert("Tarjeta inválida");
     }
-  return temp;
-}
-//creando función que valida cantidad de digitos y tipo de caracter
-function validateNoString(str){
-  var temp=true;
-  //Variable que almacenará cada carácter de frase
-  var char;
-  //Validación de 13 dígitos
-  if(str.length!==13){
-      temp=false;
-      alert("Ingrese 13 dígitos");
-  }
-  //validar ingreso de solo números
-  for(var i=0;i<str.length;i++){
-    char=str.charCodeAt(i);
-    if(char<48 || char>57){
-      alert("Ingresar solo números");
-      temp=false;
-    }
-
-  }
-  return temp;
+  
 }
 
+  
 do {
   var cardNumber = prompt('Ingresar número de tarjeta');
   var temp = true;
